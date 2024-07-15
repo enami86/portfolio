@@ -12,6 +12,10 @@ header {
     background: #333;
     color: #fff;
     padding: 1em 0;
+    position: fixed; /* ヘッダーを固定 */
+    width: 100%; /* ヘッダーの幅を100%に */
+    top: 0; /* ヘッダーをページの上部に固定 */
+    z-index: 1000; /* ヘッダーを他の要素より前面に表示 */
 }
 
 header nav ul {
@@ -27,7 +31,7 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -41,16 +45,17 @@ header nav ul li a {
 }
 
 #home h1 {
-    font-size: 50px;
+    font-size: 90px;
     color: hsl(357, 100%, 71%);
     margin: 0;
+    text-align: left;
     padding: 20px;
     background-color: #78766f;
     height: 750px;
     width: 100%; /* 幅を100%にする */
     display: flex;
     align-items: center; /* h1内のテキストを縦方向の中央揃え */
-    justify-content: center; /* h1内のテキストを横方向の中央揃え */
+    justify-content: left; /* h1内のテキストを横方向の中央揃え */
 }
 
 #about {
@@ -98,10 +103,11 @@ header nav ul li a {
 #about .birth {
     position: absolute; 
     top: 200px;
-    left: 580px;
+    left: 590px;
     transform: translateX(-50%);
     font-size: 20px;
 }
+
 
 #about .from p {
     position: absolute; 
@@ -117,7 +123,32 @@ header nav ul li a {
     transform: translateX(-50%);
     font-size: 20px;
 }
+.from .map {
+    position: absolute; 
+    top: 250px; 
+    right: 280px; 
+    width: 350px; 
+    height: auto; 
+}
 
+.from .house {
+    position: absolute; 
+    top: 350px; 
+    right: 520px; 
+    width: 20px;
+    height: auto;
+}
+.from .house::before {
+    content: ''; /* 空のコンテンツ */
+    position: absolute; /* 絶対位置指定 */
+    top: 100px; /* 画像の上からの位置を調整 */
+    left: -5px; /* 画像の左からの位置を調整 */
+    width: 3033333px; /* 赤丸の直径 */
+    height: 30px; /* 赤丸の直径 */
+    background-color: red; /* 赤色 */
+    border-radius: 50%; /* 丸くする */
+    z-index: -1; /* 画像の背面に配置 */
+}
 
 #about .daigaku p {
     position: absolute; 
@@ -142,18 +173,51 @@ header nav ul li a {
     transform: translateX(-50%);
     font-size: 20px;
 }
-
+#portfolio {
+    text-align: center; /* 子要素を中央揃えにする */
+}
 section {
     padding: 2em 0;
     text-align: center;
 }
-
-.gallery {
+.hand {
+    display: block; 
+    margin: 20px auto;
+    width: 900px; 
+    height: auto; 
+}
+.line {
+    display: block; 
+    top: 1500px;
+    margin: 20px auto;
+    width: 900px; 
+    height: auto; 
+}
+.portblue {
+    top: -1210px;
+    width: 80%;
+    height: 1200px;
+    background-color: #add8e6; /* 水色 */
+    margin: 20px auto;
+    border-radius: 10px;
+    position: relative; 
+    z-index: -1;
+}
+.gallery h2 p{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+#contact {
+    top: 1000000px;
+    padding: 1em 0; /* 上下のパディングを減らす */
+    margin-top: 50px; /* 上に少し移動させる */
+    text-align: center;
+}
 
+#contact h2 {
+    margin-bottom: 10px; /* 見出しと電話番号の間のスペースを調整 */
+}
 footer {
     background: #333;
     color: #fff;
