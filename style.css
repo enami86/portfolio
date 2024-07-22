@@ -1,4 +1,3 @@
-/* 基本のスタイル */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -12,10 +11,10 @@ header {
     background: #333;
     color: #fff;
     padding: 1em 0;
-    position: fixed; /* ヘッダーを固定 */
-    width: 100%; /* ヘッダーの幅を100%に */
-    top: 0; /* ヘッダーをページの上部に固定 */
-    z-index: 1000; /* ヘッダーを他の要素より前面に表示 */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 header nav ul {
@@ -38,10 +37,10 @@ header nav ul li a {
 #home {
     margin: 0;
     padding: 0;
-    height: 100vh; /* セクション全体を画面いっぱいにする */
+    height: 100vh;
     display: flex;
-    align-items: center; /* 縦方向の中央揃え */
-    justify-content: center; /* 横方向の中央揃え */
+    align-items: center;
+    justify-content: center;
 }
 
 #home h1 {
@@ -52,21 +51,22 @@ header nav ul li a {
     padding: 20px;
     background-color: #78766f;
     height: 750px;
-    width: 100%; /* 幅を100%にする */
+    width: 100%;
     display: flex;
-    align-items: center; /* h1内のテキストを縦方向の中央揃え */
-    justify-content: left; /* h1内のテキストを横方向の中央揃え */
+    align-items: center;
+    justify-content: left;
 }
 
 #about {
-    position: relative; /* positionをrelativeに設定 */
+    position: relative;
     padding: 2em 0;
     text-align: center;
+    margin-bottom: 0; /* 追加: 不要なマージンを削除 */
 }
 
 #about h2 {
-    position: absolute; 
-    top: 70px; 
+    position: absolute;
+    top: 70px;
     font-size: 40px;
     width: 100%;
     color: #ff7300;
@@ -76,14 +76,14 @@ header nav ul li a {
     top: 50px;
     width: 80%;
     height: 600px;
-    background-color: #add8e6; /* 水色 */
+    background-color: #add8e6;
     margin: 20px auto;
     border-radius: 10px;
-    position: relative; /* テキストを上に配置するためにrelativeに設定 */
+    position: relative;
 }
 
 #about .name {
-    position: absolute; 
+    position: absolute;
     top: 120px;
     left: 350px;
     transform: translateX(-50%);
@@ -94,71 +94,71 @@ header nav ul li a {
     font-size: 20px;
     color: #fff;
     font-weight: normal;
-    margin-top: 10px; /* マージンを調整 */
-    position: relative; /* 必要に応じて相対位置を指定 */
-    top: 25px; /* 上下の位置を調整 */
+    margin-top: 10px;
+    top: 25px;
     position: absolute;
 }
 
 #about .birth {
-    position: absolute; 
+    position: absolute;
     top: 200px;
     left: 590px;
     transform: translateX(-50%);
     font-size: 20px;
 }
 
-
 #about .from p {
-    position: absolute; 
+    position: absolute;
     top: 280px;
     left: 200px;
     transform: translateX(-50%);
     font-size: 20px;
 }
+
 #about .from h3 {
-    position: absolute; 
+    position: absolute;
     top: 320px;
     left: 260px;
     transform: translateX(-50%);
     font-size: 20px;
 }
+
 .from .map {
-    position: absolute; 
-    top: 250px; 
-    right: 280px; 
-    width: 350px; 
-    height: auto; 
+    position: absolute;
+    top: 250px;
+    right: 280px;
+    width: 350px;
+    height: auto;
 }
 
 .from .house {
-    position: absolute; 
-    top: 350px; 
-    right: 520px; 
+    position: absolute;
+    top: 350px;
+    right: 520px;
     width: 20px;
     height: auto;
 }
+
 .from .house::before {
-    content: ''; /* 空のコンテンツ */
-    position: absolute; /* 絶対位置指定 */
-    top: 100px; /* 画像の上からの位置を調整 */
-    left: -5px; /* 画像の左からの位置を調整 */
-    width: 3033333px; /* 赤丸の直径 */
-    height: 30px; /* 赤丸の直径 */
-    background-color: red; /* 赤色 */
-    border-radius: 50%; /* 丸くする */
-    z-index: -1; /* 画像の背面に配置 */
+    content: '';
+    position: absolute;
+    top: 100px;
+    left: -5px;
+    width: 30px;
+    height: 30px;
+    background-color: red;
 }
 
 #about .daigaku p {
-    position: absolute; 
+    position: absolute;
     top: 430px;
     left: 200px;
     transform: translateX(-50%);
     font-size: 20px;
 }
+
 #about .daigaku h3 {
-    position: absolute; 
+    position: absolute;
     top: 470px;
     left: 320px;
     transform: translateX(-50%);
@@ -167,64 +167,63 @@ header nav ul li a {
 
 #about .skill {
     text-align: left;
-    position: absolute; 
+    position: absolute;
     top: 280px;
     left: 600px;
     transform: translateX(-50%);
     font-size: 20px;
 }
+
 #portfolio {
-    text-align: center; /* 子要素を中央揃えにする */
+    position: relative; /* 相対位置を指定 */
+    padding: 2em 0;
+    text-align: center;
+    margin-top: 0;
+}
+.portfolio-background {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* 四角形の幅 */
+    height: 100%; /* 四角形の高さ */
+    background-color: #add8e6; /* 背景色と透明度 */
+    z-index: -1; /* 他のコンテンツの背面に配置 */
+    border-radius: 10px; /* 角を丸める */
 }
 section {
     padding: 2em 0;
     text-align: center;
 }
+
 .hand {
-    display: block; 
+    display: block;
     margin: 20px auto;
-    width: 900px; 
-    height: auto; 
+    width: 600px;
+    height: auto;
 }
+
 .line {
-    display: block; 
-    top: 1500px;
+    display: block;
     margin: 20px auto;
-    width: 900px; 
-    height: auto; 
+    width: 600px;
 }
-.portblue {
-    top: -1210px;
-    width: 80%;
-    height: 1200px;
-    background-color: #add8e6; /* 水色 */
-    margin: 20px auto;
-    border-radius: 10px;
-    position: relative; 
-    z-index: -1;
-}
-.gallery h2 p{
+
+
+.gallery h2 p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
 }
+
 #contact {
-    top: 1000000px;
-    padding: 1em 0; /* 上下のパディングを減らす */
-    margin-top: 50px; /* 上に少し移動させる */
+    padding: 1em 0;
+    margin-top: 0; /* 追加: 不要なマージンを削除 */
     text-align: center;
 }
 
 #contact h2 {
-    margin-bottom: 10px; /* 見出しと電話番号の間のスペースを調整 */
-}
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 1em 0;
-    bottom: 0;
-    width: 100%;
+    margin-bottom: 10px;
 }
 
 /* レスポンシブデザインのスタイル */
