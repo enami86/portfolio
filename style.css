@@ -59,9 +59,10 @@ header nav ul li a {
 
 #about {
     position: relative;
+    color: #333;
     padding: 2em 0;
     text-align: center;
-    margin-bottom: 0; /* 追加: 不要なマージンを削除 */
+    margin-bottom: 0;  
 }
 
 #about h2 {
@@ -92,7 +93,7 @@ header nav ul li a {
 
 #about .name h4 {
     font-size: 20px;
-    color: #fff;
+    color: #333;
     font-weight: normal;
     margin-top: 10px;
     top: 25px;
@@ -109,6 +110,7 @@ header nav ul li a {
 
 #about .from p {
     position: absolute;
+    font-weight: normal;
     top: 280px;
     left: 200px;
     transform: translateX(-50%);
@@ -121,6 +123,7 @@ header nav ul li a {
     left: 260px;
     transform: translateX(-50%);
     font-size: 20px;
+    font-weight: 400;
 }
 
 .from .map {
@@ -163,6 +166,7 @@ header nav ul li a {
     left: 320px;
     transform: translateX(-50%);
     font-size: 20px;
+    font-weight: 400;
 }
 
 #about .skill {
@@ -175,38 +179,65 @@ header nav ul li a {
 }
 
 #portfolio {
-    position: relative; /* 相対位置を指定 */
+    position: relative;
     padding: 2em 0;
     text-align: center;
     margin-top: 0;
 }
+
+#portfolio h2 {
+    font-size: 40px;
+    width: 100%;
+    color: #ff7300;
+    margin-bottom: 20px;
+}
+#portfolio h3{
+    font-weight: 400;
+    color: #333;
+}
+
 .portfolio-background {
     position: absolute;
     top: 50px;
     left: 50%;
     transform: translateX(-50%);
-    width: 80%; /* 四角形の幅 */
-    height: 100%; /* 四角形の高さ */
-    background-color: #add8e6; /* 背景色と透明度 */
-    z-index: -1; /* 他のコンテンツの背面に配置 */
-    border-radius: 10px; /* 角を丸める */
+    width: 80%;
+    height: 95%;
+    background-color: #add8e6;
+    z-index: -1;
+    border-radius: 10px;
 }
-section {
-    padding: 2em 0;
-    text-align: center;
+
+.image-container {
+    margin: 20px auto;
+    width: 80%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.image-container h3 {
+    margin-top: 10px;
+    color: #fff;
 }
 
 .hand {
     display: block;
     margin: 20px auto;
-    width: 600px;
+    width: 80%; /* 幅を親要素に対して調整 */
     height: auto;
+    border: 2px solid #fff;
+    border-radius: 10px;
 }
 
 .line {
     display: block;
     margin: 20px auto;
-    width: 600px;
+    width:
 }
 
 
@@ -225,6 +256,23 @@ section {
 #contact h2 {
     margin-bottom: 10px;
 }
+.phone{
+    display: block;
+    margin: 20px auto;
+    width: 50px;
+    height: auto;
+    position: absolute;
+    left: 600px;
+}
+.mail{
+    display: block;
+    margin: 20px auto;
+    width: 50px;
+    height: auto;
+    position: absolute;
+    right: 600px;
+}
+
 
 /* レスポンシブデザインのスタイル */
 @media (max-width: 600px) {
